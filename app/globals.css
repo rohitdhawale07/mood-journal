@@ -1,0 +1,164 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/**
+ * Global CSS Variables and Styles
+ *
+ * This file contains global CSS variables and styles for the application.
+ * It defines the color scheme for both light and dark modes.
+ *
+ * @author Rohit Dhawale
+ * @date April 2025
+ */
+
+:root {
+  /* Light mode colors */
+  --background: 0 0% 100%;
+  --foreground: 222.2 84% 4.9%;
+  --card: 0 0% 100%;
+  --card-foreground: 222.2 84% 4.9%;
+  --popover: 0 0% 100%;
+  --popover-foreground: 222.2 84% 4.9%;
+  --primary: 346 100% 65%;
+  --primary-foreground: 210 40% 98%;
+  --secondary: 210 40% 96.1%;
+  --secondary-foreground: 222.2 47.4% 11.2%;
+  --muted: 210 40% 96.1%;
+  --muted-foreground: 215.4 16.3% 46.9%;
+  --accent: 210 40% 96.1%;
+  --accent-foreground: 222.2 47.4% 11.2%;
+  --destructive: 0 84.2% 60.2%;
+  --destructive-foreground: 210 40% 98%;
+  --border: 214.3 31.8% 91.4%;
+  --input: 214.3 31.8% 91.4%;
+  --ring: 346 100% 65%;
+  --radius: 0.75rem;
+}
+
+.dark {
+  /* Dark mode colors */
+  --background: 222.2 84% 4.9%;
+  --foreground: 210 40% 98%;
+  --card: 222.2 84% 4.9%;
+  --card-foreground: 210 40% 98%;
+  --popover: 222.2 84% 4.9%;
+  --popover-foreground: 210 40% 98%;
+  --primary: 346 100% 65%;
+  --primary-foreground: 222.2 47.4% 11.2%;
+  --secondary: 217.2 32.6% 17.5%;
+  --secondary-foreground: 210 40% 98%;
+  --muted: 217.2 32.6% 17.5%;
+  --muted-foreground: 215 20.2% 65.1%;
+  --accent: 217.2 32.6% 17.5%;
+  --accent-foreground: 210 40% 98%;
+  --destructive: 0 62.8% 30.6%;
+  --destructive-foreground: 210 40% 98%;
+  --border: 217.2 32.6% 17.5%;
+  --input: 217.2 32.6% 17.5%;
+  --ring: 346 100% 65%;
+}
+
+/* Base styles */
+body {
+  margin: 0;
+  padding: 0;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+}
+
+/* Calendar customization */
+.rdp {
+  --rdp-cell-size: 40px !important;
+  --rdp-accent-color: rgb(251, 113, 133) !important;
+  --rdp-background-color: rgb(254, 226, 226) !important;
+  margin: 0 !important;
+  width: 100% !important;
+}
+
+.rdp-months {
+  width: 100% !important;
+}
+
+.rdp-month {
+  width: 100% !important;
+}
+
+.rdp-table {
+  width: 100% !important;
+  max-width: 100% !important;
+}
+
+.rdp-cell {
+  height: var(--rdp-cell-size) !important;
+  width: calc(100% / 7) !important;
+  padding: 0 !important;
+}
+
+.rdp-head_cell {
+  width: calc(100% / 7) !important;
+  text-align: center !important;
+}
+
+.rdp-day_selected,
+.rdp-day_selected:focus-visible,
+.rdp-day_selected:hover {
+  background-color: rgb(251, 113, 133) !important;
+  color: white !important;
+}
+
+.rdp-button:hover:not([disabled]):not(.rdp-day_selected) {
+  background-color: rgb(254, 226, 226) !important;
+}
+
+/* Dark mode calendar customization */
+.dark .rdp-day_selected,
+.dark .rdp-day_selected:focus-visible,
+.dark .rdp-day_selected:hover {
+  background-color: rgb(244, 63, 94) !important;
+  color: white !important;
+}
+
+.dark .rdp-button:hover:not([disabled]):not(.rdp-day_selected) {
+  background-color: rgb(64, 64, 64) !important;
+}
+
+.dark .rdp-day {
+  color: white !important;
+}
+
+.dark .rdp-head_cell {
+  color: rgb(156, 163, 175) !important;
+}
+
+.dark .rdp-nav_button {
+  color: white !important;
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.animate-fadeIn {
+  animation: fadeIn 0.5s ease-in-out;
+}
+
+@keyframes slideUp {
+  from {
+    transform: translateY(20px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+.animate-slideUp {
+  animation: slideUp 0.5s ease-out;
+}
