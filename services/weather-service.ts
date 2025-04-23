@@ -11,7 +11,7 @@
 import type { Weather } from "@/types/journal-types"
 
 // OpenWeatherMap API key 
-const API_KEY = process.env.API_KEY
+const API_KEY = "1028ab98069aec2a1dfccd1607595da3"
 /**
  * Get the user's current location using the browser's Geolocation API
  * @returns Promise with coordinates {latitude, longitude}
